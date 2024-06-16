@@ -99,6 +99,11 @@ _G.packer_plugins = {
     path = "/home/kali/.local/share/nvim/site/pack/packer/start/delimitMate",
     url = "https://github.com/Raimondi/delimitMate"
   },
+  ["gitsigns.nvim"] = {
+    loaded = true,
+    path = "/home/kali/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
+    url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
   harpoon = {
     loaded = true,
     path = "/home/kali/.local/share/nvim/site/pack/packer/start/harpoon",
