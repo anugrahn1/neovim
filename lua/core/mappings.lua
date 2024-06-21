@@ -15,5 +15,5 @@ vim.keymap.set({'n', 't'}, "<C-/>", vim.cmd.FTermToggle)
 
 
 -- cycle through buffers
-vim.keymap.set({'n', 'v', 'i'}, "<C-h>", vim.cmd.bprevious)
-vim.keymap.set({'n', 'v', 'i'}, "<C-l>", vim.cmd.bnext)
+vim.keymap.set({'n', 'v'}, "<leader>h", vim.cmd.bprevious)
+vim.keymap.set({'n', 'v'}, "<leader>l", vim.cmd.bnext)
