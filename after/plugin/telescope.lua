@@ -1,10 +1,21 @@
 local builtin = require('telescope.builtin')
+-- vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
 vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
 vim.keymap.set('n', '<leader>pg', builtin.live_grep, {})
+
+
 
 -- telescope ui select config
 -- This is your opts table
 require("telescope").setup {
+  defaults = {
+    -- file_ignore_patterns = {".git"}
+  },
+  pickers = {
+    find_files = {
+      hidden = true,
+    }
+  },
   extensions = {
     ["ui-select"] = {
       require("telescope.themes").get_dropdown {

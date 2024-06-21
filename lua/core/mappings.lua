@@ -11,8 +11,7 @@ vim.keymap.set("n", "<leader>R", ":SearchBoxReplace confirm=menu <CR>")
 
 -- escape terminal mode
 vim.api.nvim_set_keymap(  't'  ,  '<C-c>'  ,  '<C-\\><C-n>'  ,  {noremap = true}  )
-vim.keymap.set({'n', 't'}, "<C-/>", vim.cmd.FTermToggle)
-
+vim.keymap.set({'n', 't'}, "<C-\\>", vim.cmd.FTermToggle)
 
 -- cycle through buffers
 vim.keymap.set({'n', 'v'}, "<leader>h", vim.cmd.bprevious)
