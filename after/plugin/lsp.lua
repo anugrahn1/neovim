@@ -26,12 +26,13 @@ require('mason').setup({})
 require('mason-lspconfig').setup({
   -- Put LSPs in ensure_installed
   -- https://github.com/williamboman/mason-lspconfig.nvim#available-lsp-servers
-  ensure_installed = { 'lua_ls', 'jdtls', 'pyright', 'clangd' },
+  ensure_installed = { 'lua_ls',  'pyright', 'clangd', 'jdtls', 'tsserver' },
   handlers = {
 
     function(server_name)
       require('lspconfig')[server_name].setup({})
     end,
+
 
   },
 })

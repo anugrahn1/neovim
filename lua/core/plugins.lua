@@ -44,9 +44,18 @@ return require("packer").startup(function(use)
 		"neovim/nvim-lspconfig",
 	})
 
-	use({ "Raimondi/delimitMate" })
+  -- 
+  use{
+    "windwp/nvim-autopairs",
+    event = "InsertEnter",
+    config = function ()
+      require("nvim-autopairs").setup {}
+    end
+  }
 
-	-- used to manage formatters
+  use("windwp/nvim-ts-autotag")
+
+  -- used to manage formatters
 	use({
 		"jay-babu/mason-null-ls.nvim",
 		requires = {
@@ -58,8 +67,17 @@ return require("packer").startup(function(use)
 	use({ "hrsh7th/cmp-path" })
 	use("nvim-tree/nvim-web-devicons")
 
-  use("stevearc/oil.nvim")
-  use("lewis6991/gitsigns.nvim")
+	use("stevearc/oil.nvim")
+	use("lewis6991/gitsigns.nvim")
+	use("lukas-reineke/indent-blankline.nvim")
+  
+  use {
+    'VonHeikemen/searchbox.nvim',
+    requires = {
+      { 'MunifTanjim/nui.nvim' }
+    }
+  }
+
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if packer_bootstrap then
