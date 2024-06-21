@@ -44,18 +44,18 @@ return require("packer").startup(function(use)
 		"neovim/nvim-lspconfig",
 	})
 
-  -- 
-  use{
-    "windwp/nvim-autopairs",
-    event = "InsertEnter",
-    config = function ()
-      require("nvim-autopairs").setup {}
-    end
-  }
+	--
+	use({
+		"windwp/nvim-autopairs",
+		event = "InsertEnter",
+		config = function()
+			require("nvim-autopairs").setup({})
+		end,
+	})
 
-  use("windwp/nvim-ts-autotag")
+	use("windwp/nvim-ts-autotag")
 
-  -- used to manage formatters
+	-- used to manage formatters
 	use({
 		"jay-babu/mason-null-ls.nvim",
 		requires = {
@@ -70,14 +70,22 @@ return require("packer").startup(function(use)
 	use("stevearc/oil.nvim")
 	use("lewis6991/gitsigns.nvim")
 	use("lukas-reineke/indent-blankline.nvim")
-  
-  use {
-    'VonHeikemen/searchbox.nvim',
-    requires = {
-      { 'MunifTanjim/nui.nvim' }
-    }
-  }
 
+	use({
+		"VonHeikemen/searchbox.nvim",
+		requires = {
+			{ "MunifTanjim/nui.nvim" },
+		},
+	})
+	use({
+		"startup-nvim/startup.nvim",
+		requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
+		config = function()
+			require("startup").setup()
+		end,
+	})
+
+	use("numToStr/FTerm.nvim")
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if packer_bootstrap then

@@ -8,3 +8,7 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 -- replace words
 vim.keymap.set("n", "<leader>r", vim.cmd.SearchBoxReplace)
 vim.keymap.set("n", "<leader>R", ":SearchBoxReplace confirm=menu <CR>")
+
+-- escape terminal mode
+vim.api.nvim_set_keymap(  't'  ,  '<C-c>'  ,  '<C-\\><C-n>'  ,  {noremap = true}  )
+vim.keymap.set({'n', 't'}, "<C-/>", vim.cmd.FTermToggle)
