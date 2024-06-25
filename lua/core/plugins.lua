@@ -91,6 +91,7 @@ return require("packer").startup(function(use)
     requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
   use{("yamatsum/nvim-cursorline")}
+	use({ "ggandor/leap.nvim", requires = "tpope/vim-repeat" })
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if packer_bootstrap then
