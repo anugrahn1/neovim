@@ -55,3 +55,4 @@ vim.opt.splitbelow = true
 -- mouse mode
 vim.opt.mouse = 'a'
 
+vim.opt.showmode = false -- dont need mode because of lualine
