@@ -35,6 +35,7 @@ return require("packer").startup(function(use)
 			{ "hrsh7th/nvim-cmp" },
 			{ "hrsh7th/cmp-nvim-lsp" },
 			{ "L3MON4D3/LuaSnip" },
+      {"rafamadriz/friendly-snippets"},
 		},
 	})
 
@@ -91,6 +92,8 @@ return require("packer").startup(function(use)
     requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
   use{("yamatsum/nvim-cursorline")}
+  use({"rafamadriz/friendly-snippets"})
+  use { 'saadparwaiz1/cmp_luasnip' }
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if packer_bootstrap then
