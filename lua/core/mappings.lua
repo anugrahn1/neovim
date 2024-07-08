@@ -22,3 +22,4 @@ vim.keymap.set({'n', 'v'}, "<leader>q", vim.cmd.bdelete)
 vim.keymap.set({'n', 'v'}, "<C-c>", vim.cmd.noh)
 
 
+

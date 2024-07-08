@@ -13,7 +13,7 @@ vim.opt.number = true
 vim.opt.relativenumber = true 
 -- vim.opt.signcolumn = 'yes:2'
 vim.opt.signcolumn = 'yes'
-vim.opt.cursorline = true 
+vim.opt.cursorline = true
 -- vim.opt.colorcolumn = '80,120'
 
 -- Better editing experience
@@ -55,3 +55,4 @@ vim.opt.splitbelow = true
 -- mouse mode
 vim.opt.mouse = 'a'
 
+vim.opt.showmode = false -- dont need mode because of lualine

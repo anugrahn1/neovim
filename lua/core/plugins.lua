@@ -94,6 +94,7 @@ return require("packer").startup(function(use)
   use{("yamatsum/nvim-cursorline")}
   use({"rafamadriz/friendly-snippets"})
   use { 'saadparwaiz1/cmp_luasnip' }
+  use({"nvim-treesitter/nvim-treesitter-context"})
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if packer_bootstrap then
